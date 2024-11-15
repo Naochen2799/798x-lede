@@ -62,7 +62,7 @@ jobs:
 
     - name: Download .config file
       working-directory: ./lede
-      run: wget https://github.com/Naochen2799/798x-lede/.config -O .config
+      run: wget https://raw.githubusercontent.com/Naochen2799/798x-lede/refs/heads/main/.config -O .config
 
     - name: Build OpenWrt
       working-directory: ./lede
