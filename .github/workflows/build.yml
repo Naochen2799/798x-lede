@@ -71,7 +71,7 @@ jobs:
     - name: Upload firmware to GitHub Releases
       uses: ncipollo/release-action@v1
       with:
-        artifacts: lede/bin/targets/**/*
+        artifacts: lede/bin/targets/**/*.bin
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: latest
         name: OpenWrt Firmware
