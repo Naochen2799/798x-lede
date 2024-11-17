@@ -16,9 +16,9 @@ jobs:
         keep_minimum_runs: 0
     
     - name: 删除旧的Releases
-      uses: dev-drprasad/delete-older-releases@v0.2.0
+      uses: dev-drprasad/delete-older-releases@master
       with:
-        keep_latest: 5
+        keep_latest: 0
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
