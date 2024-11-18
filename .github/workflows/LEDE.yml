@@ -64,10 +64,14 @@ jobs:
       working-directory: ./lede
       run: wget https://raw.githubusercontent.com/Naochen2799/798x-lede/refs/heads/main/.config -O .config
 
-    - name: Build OpenWrt
+    - name: Download OpenWrt
       working-directory: ./lede
       run: |
         make download -j$(nproc)
+
+    - name: Build OpenWrt
+      working-directory: ./lede
+      run: |
         make -j$(nproc)
 
     - name: Upload firmware to GitHub Releases
