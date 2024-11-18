@@ -68,7 +68,7 @@ jobs:
       working-directory: ./lede
       run: |
         make download -j$(nproc)
-        make V=s -j$(nproc)
+        make -j$(nproc)
 
     - name: Upload firmware to GitHub Releases
       uses: ncipollo/release-action@v1
